@@ -8,6 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper'; 
+import AddNewButton from '../components/AddNewButton';
 
 function createData(status, busNo, driverNo, sourceLocation, destination, date, time) {
     return { status, busNo, driverNo, sourceLocation, destination, date, time };
@@ -29,7 +30,16 @@ const rows = [
 const BusDetails = () => {
     return (
         <div className='h-full flex items-center justify-center flex-col overflow-y-scroll px-8'>
-            <h2 className='flex items-center text-left w-full pb-4 text-3xl'><GrBus className='mr-4'/>Bus Details</h2>
+            <div className='flex items-center text-left w-full pb-4 text-3xl justify-between'>
+                <div className='flex'>
+                    <GrBus className='mr-4'/>
+                    Bus Details
+                </div>
+
+                <div>
+                    <AddNewButton title="Add New Bus"/>
+                </div>
+            </div>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 1050 }} aria-label="caption table">
                     <TableHead style={{ boxShadow: '0px 1px 9px rgba(0, 0, 0, 0.12)', borderRadius: '12px' }}>
