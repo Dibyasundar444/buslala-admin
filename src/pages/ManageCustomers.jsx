@@ -1,5 +1,6 @@
 import React from 'react'
 import { GrBus } from 'react-icons/gr';
+import { Link } from 'react-router-dom';
 //Material-UI
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -34,9 +35,9 @@ const ManageCustomers = () => {
                     Manage Customers
                 </div>
 
-                <div>
+                <Link to="/new-customer-form">
                     <AddNewButton title="Add New Customer"/>
-                </div>
+                </Link>
             </div>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 1050 }} aria-label="caption table">
