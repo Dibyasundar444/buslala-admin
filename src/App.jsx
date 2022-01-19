@@ -26,7 +26,7 @@ const App = () => {
   return (
     <>
       {
-        account.email == "tushar" ?
+        account.email == "ye_mera_hai_123" ?
         <div className="flex h-screen">
           <Router>
             <Sidebar setAccount={setAccount}/>
