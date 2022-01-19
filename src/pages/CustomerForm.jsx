@@ -2,9 +2,10 @@ import React from 'react'
 import { BsArrowReturnLeft } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
-const InputStyle = "border-[1px] my-4 h-14 p-2 rounded-md outline-none hover:shadow-bs1 transition-all duration-200"
+const InputStyle = "border-black border-[1px] my-4 h-14 p-2 rounded-md outline-none hover:shadow-bs1 transition-all duration-200"
 
-const CustomerForm = () => {
+const CustomerForm = ({ data }) => {
+    console.log(data);
     return (
         <div className='mt-12'>
             <div className='px-60 h-16 flex items-center justify-between'>
@@ -15,7 +16,7 @@ const CustomerForm = () => {
             </div>
     
             <form className='flex flex-col pl-60 py-8'>
-                <input type="number" placeholder="Enter Customer ID" className={`${InputStyle} w-72`}/>
+                <input type="number" placeholder="Enter Customer ID" className={`${InputStyle} w-72 border`}/>
                 <input type="text" placeholder='Enter Customer Name' className={`${InputStyle} w-96`}/>
                 <input type="email" placeholder="Enter Customer Email" className={`${InputStyle} w-96`}/>
                 <input type="number" placeholder='Enter Customer Phone Number' className={`${InputStyle} w-72`} />

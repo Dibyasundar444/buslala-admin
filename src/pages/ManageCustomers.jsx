@@ -10,6 +10,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import AddNewButton from '../components/AddNewButton';
+import View from '../components/View';
+import Edit from '../components/Edit';
+import Delete from '../components/Delete';
 
 function createData(customerId, name, email, phoneNo, view, edit, del) {
     return { customerId, name, email, phoneNo, view, edit, del };
@@ -27,6 +30,11 @@ const rows = [
 ];
 
 const ManageCustomers = () => {
+
+    // const dataTransfer = (row) => {
+    //     console.log(row);
+    //     console.log("dataTransfer")
+    // }
     return (
         <div className='h-full flex items-center justify-center flex-col overflow-hidden px-8 py-14'>
             <div className='flex items-center text-left w-full pb-4 text-3xl justify-between'>
@@ -40,16 +48,16 @@ const ManageCustomers = () => {
                 </Link>
             </div>
             <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 1050 }} aria-label="caption table">
+                <Table sx={{ minWidth: 1150 }} aria-label="caption table">
                     <TableHead style={{ boxShadow: '0px 1px 9px rgba(0, 0, 0, 0.12)', borderRadius: '12px' }}>
                         <TableRow>
                             <TableCell>Customer ID</TableCell>
-                            <TableCell align="right">Name</TableCell>
-                            <TableCell align="right">Email</TableCell>
-                            <TableCell align="right">Phone No.</TableCell>
-                            <TableCell align="right">View</TableCell>
-                            <TableCell align="right">Edit</TableCell>
-                            <TableCell align="right">Delete</TableCell>
+                            <TableCell align="center">Name</TableCell>
+                            <TableCell align="center">Email</TableCell>
+                            <TableCell align="center">Phone No.</TableCell>
+                            <TableCell align="center">View</TableCell>
+                            <TableCell align="center">Edit</TableCell>
+                            <TableCell align="center">Delete</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -58,12 +66,16 @@ const ManageCustomers = () => {
                             <TableCell component="th" scope="row">
                                 {row.customerId}
                             </TableCell>
-                            <TableCell align="right">{row.name}</TableCell>
-                            <TableCell align="right">{row.email}</TableCell>
-                            <TableCell align="right">{row.phoneNo}</TableCell>
-                            <TableCell align="right">{row.view}</TableCell>
-                            <TableCell align="right">{row.edit}</TableCell>
-                            <TableCell align="right">{row.del}</TableCell>
+                            <TableCell align="center">{row.name}</TableCell>
+                            <TableCell align="center">{row.email}</TableCell>
+                            <TableCell align="center">{row.phoneNo}</TableCell>
+                            <TableCell align="center"><View title={row.view}/></TableCell>
+                            <TableCell align="center">
+                                <Link to="/new-customer-form">
+                                    <Edit title={row.edit} />
+                                </Link>
+                            </TableCell>
+                            <TableCell align="center"><Delete title={row.del}/></TableCell>
                         </TableRow>
                     ))}
                     </TableBody>

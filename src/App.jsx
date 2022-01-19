@@ -19,38 +19,41 @@ import DriverForm from "./pages/DriverForm"
 
 const App = () => {
 
-  // const [user, setUser] = useState({})
+  const [account, setAccount] = useState({})
 
-  // console.log(user)
+  console.log(account.email)
 
   return (
     <>
-      {/* <div>
-        <Login setAccount={setUser}/>
-      </div> */}
-      <div className="flex h-screen">
-        <Router>
-          <Sidebar />
-          <div className="flex flex-col w-full">
-            <Header />
-                <Routes>
-                  <Route path="/" element={<DashboardHome />} />
-                  <Route path="/bus-details" element={<BusDetails />} />
-                  <Route path="/location-details" element={<LocationDetails />} />
-                  <Route path="/booking-details" element={<BookingDetails />} />
-                  <Route path="/manage-customers" element={<ManageCustomers />} />
-                  <Route path="/manage-drivers" element={<ManageDrivers />} />
-                  <Route path="/manage-subadmin" element={<ManageSubadmin />} />
-                  <Route path="/manage-source" element={<ManageSource />} />
-                  <Route path="/manage-destination" element={<ManageDestination />} />
-                  <Route path="/manage-fare" element={<ManageFare />} />
-                  <Route path="/manage-routes" element={<ManageRoutes />} />
-                  <Route path="/new-customer-form" element={<CustomerForm />} />
-                  <Route path="/new-driver-form" element={<DriverForm />} />
-                </Routes>
-          </div>
-        </Router>
-      </div>
+      {
+        account.email == "tushar" ?
+        <div className="flex h-screen">
+          <Router>
+            <Sidebar setAccount={setAccount}/>
+            <div className="flex flex-col w-full">
+              <Header />
+                  <Routes>
+                    <Route path="/" element={<DashboardHome />} />
+                    <Route path="/bus-details" element={<BusDetails />} />
+                    <Route path="/location-details" element={<LocationDetails />} />
+                    <Route path="/booking-details" element={<BookingDetails />} />
+                    <Route path="/manage-customers" element={<ManageCustomers />} />
+                    <Route path="/manage-drivers" element={<ManageDrivers />} />
+                    <Route path="/manage-subadmin" element={<ManageSubadmin />} />
+                    <Route path="/manage-source" element={<ManageSource />} />
+                    <Route path="/manage-destination" element={<ManageDestination />} />
+                    <Route path="/manage-fare" element={<ManageFare />} />
+                    <Route path="/manage-routes" element={<ManageRoutes />} />
+                    <Route path="/new-customer-form" element={<CustomerForm />} />
+                    <Route path="/new-driver-form" element={<DriverForm />} />
+                  </Routes>
+            </div>
+          </Router>
+        </div> :
+        <div>
+          <Login setAccount={setAccount}/>
+        </div>
+      }
     </>
   )
 }

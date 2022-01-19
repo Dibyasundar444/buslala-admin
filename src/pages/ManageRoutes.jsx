@@ -43,11 +43,11 @@ const ManageRoutes = () => {
                     <TableHead style={{ boxShadow: '0px 1px 9px rgba(0, 0, 0, 0.12)', borderRadius: '12px' }}>
                         <TableRow>
                             <TableCell>Source ID</TableCell>
-                            <TableCell align="right">Destination ID</TableCell>
-                            <TableCell align="right">Driver ID</TableCell>
-                            <TableCell align="right">Bus ID</TableCell>
-                            <TableCell align="right">Fare ID</TableCell>
-                            <TableCell align="right">Seat Availability</TableCell>
+                            <TableCell align="center">Destination ID</TableCell>
+                            <TableCell align="center">Driver ID</TableCell>
+                            <TableCell align="center">Bus ID</TableCell>
+                            <TableCell align="center">Fare ID</TableCell>
+                            <TableCell align="center">Seat Availability</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -56,11 +56,11 @@ const ManageRoutes = () => {
                             <TableCell component="th" scope="row">
                                 {row.sourceId}
                             </TableCell>
-                            <TableCell align="right">{row.destinationId}</TableCell>
-                            <TableCell align="right">{row.driverId}</TableCell>
-                            <TableCell align="right">{row.busId}</TableCell>
-                            <TableCell align="right">{row.fareId}</TableCell>
-                            <TableCell align="right">{row.seatAvailability}</TableCell>
+                            <TableCell align="center">{row.destinationId}</TableCell>
+                            <TableCell align="center">{row.driverId}</TableCell>
+                            <TableCell align="center">{row.busId}</TableCell>
+                            <TableCell align="center">{row.fareId}</TableCell>
+                            <TableCell align="center">{row.seatAvailability}</TableCell>
                         </TableRow>
                     ))}
                     </TableBody>

@@ -35,13 +35,13 @@ const LocationDetails = () => {
                     <TableHead style={{ boxShadow: '0px 1px 9px rgba(0, 0, 0, 0.12)', borderRadius: '12px' }}>
                         <TableRow>
                             <TableCell>Bus No</TableCell>
-                            <TableCell align="right">Fare</TableCell>
-                            <TableCell align="right">Source Location</TableCell>
-                            <TableCell align="right">Destinaton</TableCell>
-                            <TableCell align="right">Date</TableCell>
-                            <TableCell align="right">Time</TableCell>
-                            <TableCell align="right">Drop Points</TableCell>
-                            <TableCell align="right">Vehicle Location</TableCell>
+                            <TableCell align="center">Fare</TableCell>
+                            <TableCell align="center">Source Location</TableCell>
+                            <TableCell align="center">Destinaton</TableCell>
+                            <TableCell align="center">Date</TableCell>
+                            <TableCell align="center">Time</TableCell>
+                            <TableCell align="center">Drop Points</TableCell>
+                            <TableCell align="center">Vehicle Location</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -50,13 +50,13 @@ const LocationDetails = () => {
                             <TableCell component="th" scope="row">
                                 {row.busNo}
                             </TableCell>
-                            <TableCell align="right">{row.fare}</TableCell>
-                            <TableCell align="right">{row.sourceLocation}</TableCell>
-                            <TableCell align="right">{row.destination}</TableCell>
-                            <TableCell align="right">{row.date}</TableCell>
-                            <TableCell align="right">{row.time}</TableCell>
-                            <TableCell align="right">{row.dropPoints}</TableCell>
-                            <TableCell align="right">{row.vehicleLocation}</TableCell>
+                            <TableCell align="center">{row.fare}</TableCell>
+                            <TableCell align="center">{row.sourceLocation}</TableCell>
+                            <TableCell align="center">{row.destination}</TableCell>
+                            <TableCell align="center">{row.date}</TableCell>
+                            <TableCell align="center">{row.time}</TableCell>
+                            <TableCell align="center">{row.dropPoints}</TableCell>
+                            <TableCell align="center">{row.vehicleLocation}</TableCell>
                         </TableRow>
                     ))}
                     </TableBody>

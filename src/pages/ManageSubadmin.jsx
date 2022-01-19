@@ -9,6 +9,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import AddNewButton from '../components/AddNewButton';
+import View from '../components/View';
+import Edit from '../components/Edit';
+import Delete from '../components/Delete';
 
 function createData(subadminId, name, email, phoneNo, view, edit, del) {
     return { subadminId, name, email, phoneNo, view, edit, del };
@@ -37,12 +40,12 @@ const ManageSubadmin = () => {
                     <TableHead style={{ boxShadow: '0px 1px 9px rgba(0, 0, 0, 0.12)', borderRadius: '12px' }}>
                         <TableRow>
                             <TableCell>Subadmin ID</TableCell>
-                            <TableCell align="right">Name</TableCell>
-                            <TableCell align="right">Email</TableCell>
-                            <TableCell align="right">Phone No.</TableCell>
-                            <TableCell align="right">View</TableCell>
-                            <TableCell align="right">Edit</TableCell>
-                            <TableCell align="right">Delete</TableCell>
+                            <TableCell align="center">Name</TableCell>
+                            <TableCell align="center">Email</TableCell>
+                            <TableCell align="center">Phone No.</TableCell>
+                            <TableCell align="center">View</TableCell>
+                            <TableCell align="center">Edit</TableCell>
+                            <TableCell align="center">Delete</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -51,12 +54,12 @@ const ManageSubadmin = () => {
                             <TableCell component="th" scope="row">
                                 {row.subadminId}
                             </TableCell>
-                            <TableCell align="right">{row.name}</TableCell>
-                            <TableCell align="right">{row.email}</TableCell>
-                            <TableCell align="right">{row.phoneNo}</TableCell>
-                            <TableCell align="right">{row.view}</TableCell>
-                            <TableCell align="right">{row.edit}</TableCell>
-                            <TableCell align="right">{row.del}</TableCell>
+                            <TableCell align="center">{row.name}</TableCell>
+                            <TableCell align="center">{row.email}</TableCell>
+                            <TableCell align="center">{row.phoneNo}</TableCell>
+                            <TableCell align="center"><View title={row.view}/></TableCell>
+                            <TableCell align="center"><Edit title={row.edit}/></TableCell>
+                            <TableCell align="center"><Delete title={row.del}/></TableCell>
                         </TableRow>
                     ))}
                     </TableBody>

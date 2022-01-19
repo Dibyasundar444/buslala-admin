@@ -8,6 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Edit from '../components/Edit';
 
 function createData(sourceId, name, pickupTime, edit) {
     return { sourceId, name, pickupTime, edit };
@@ -33,9 +34,9 @@ const ManageSource = () => {
                     <TableHead style={{ boxShadow: '0px 1px 9px rgba(0, 0, 0, 0.12)', borderRadius: '12px' }}>
                         <TableRow>
                             <TableCell>Source ID</TableCell>
-                            <TableCell align="right">Name</TableCell>
-                            <TableCell align="right">Pickup Time</TableCell>
-                            <TableCell align="right">Edit</TableCell>
+                            <TableCell align="center">Name</TableCell>
+                            <TableCell align="center">Pickup Time</TableCell>
+                            <TableCell align="center">Edit</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -44,9 +45,9 @@ const ManageSource = () => {
                             <TableCell component="th" scope="row">
                                 {row.sourceId}
                             </TableCell>
-                            <TableCell align="right">{row.name}</TableCell>
-                            <TableCell align="right">{row.pickupTime}</TableCell>
-                            <TableCell align="right">{row.edit}</TableCell>
+                            <TableCell align="center">{row.name}</TableCell>
+                            <TableCell align="center">{row.pickupTime}</TableCell>
+                            <TableCell align="center"><Edit title={row.edit}/></TableCell>
                         </TableRow>
                     ))}
                     </TableBody>

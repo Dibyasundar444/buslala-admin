@@ -7,6 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Edit from '../components/Edit';
 
 function createData(id, source, destination, fare, edit) {
     return { id, source, destination, fare, edit };
@@ -32,10 +33,10 @@ const ManageFare = () => {
                     <TableHead style={{ boxShadow: '0px 1px 9px rgba(0, 0, 0, 0.12)', borderRadius: '12px' }}>
                         <TableRow>
                             <TableCell>ID</TableCell>
-                            <TableCell align="right">Source</TableCell>
-                            <TableCell align="right">Destination</TableCell>
-                            <TableCell align="right">Fare</TableCell>
-                            <TableCell align="right">Edit</TableCell>
+                            <TableCell align="center">Source</TableCell>
+                            <TableCell align="center">Destination</TableCell>
+                            <TableCell align="center">Fare</TableCell>
+                            <TableCell align="center">Edit</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -44,10 +45,10 @@ const ManageFare = () => {
                             <TableCell component="th" scope="row">
                                 {row.id}
                             </TableCell>
-                            <TableCell align="right">{row.source}</TableCell>
-                            <TableCell align="right">{row.destination}</TableCell>
-                            <TableCell align="right">{row.fare}</TableCell>
-                            <TableCell align="right">{row.edit}</TableCell>
+                            <TableCell align="center">{row.source}</TableCell>
+                            <TableCell align="center">{row.destination}</TableCell>
+                            <TableCell align="center">{row.fare}</TableCell>
+                            <TableCell align="center"><Edit title={row.edit}/></TableCell>
                         </TableRow>
                     ))}
                     </TableBody>

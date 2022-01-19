@@ -8,7 +8,6 @@ const Login = ({ setAccount }) => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [user, setUser] = useState({});
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -24,11 +23,9 @@ const Login = ({ setAccount }) => {
             email,
             password
         }
-        setUser(profile);
+        setAccount(profile);
         setEmail('');
         setPassword('');
-
-        // setAccount(user);
     }
 
     return (

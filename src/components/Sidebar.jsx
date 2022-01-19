@@ -39,13 +39,17 @@ const RoutesCollapse = [
     }
 ]
 
-const Sidebar = () => {
+const Sidebar = ({ setAccount }) => {
 
     const [open, setOpen] = React.useState(true);
 
     const handleClick = () => {
         setOpen(!open);
     };
+
+    const logoutHandler = () => {
+        setAccount({})
+    }
     return (
         <div className="w-96 bg-[#969557] h-screen px-4 pb-16 pt-10 flex flex-col justify-between overflow-y-scroll whitespace-nowrap">
             <div className='text-2xl text-white flex items-center justify-center h-24'>
@@ -155,7 +159,7 @@ const Sidebar = () => {
             <div className='h-28 p-4 text-white flex items-center justify-center'>
                 <ul className='flex flex-col items-center justify-around w-full h-24'>
                     <li className={`${ItemsCenter} pb-6 w-full flex justify-center`}><CgProfile />Profile</li>
-                    <li className={`${ItemsCenter} border-none`}><CgLogOut />Logout</li>
+                    <li className={`${ItemsCenter} border-none`} onClick={logoutHandler}><CgLogOut />Logout</li>
                 </ul>
             </div>
         </div>

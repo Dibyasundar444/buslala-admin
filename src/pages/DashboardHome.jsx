@@ -35,12 +35,12 @@ const DashboardHome = () => {
                     <TableHead style={{ boxShadow: '0px 1px 9px rgba(0, 0, 0, 0.12)', borderRadius: '12px' }}>
                         <TableRow>
                             <TableCell>Bus No</TableCell>
-                            <TableCell align="right">Driver No</TableCell>
-                            <TableCell align="right">Source Location</TableCell>
-                            <TableCell align="right">Destinaton</TableCell>
-                            <TableCell align="right">Date</TableCell>
-                            <TableCell align="right">Time</TableCell>
-                            <TableCell align="right">Remarks</TableCell>
+                            <TableCell align="center">Driver No</TableCell>
+                            <TableCell align="center">Source Location</TableCell>
+                            <TableCell align="center">Destinaton</TableCell>
+                            <TableCell align="center">Date</TableCell>
+                            <TableCell align="center">Time</TableCell>
+                            <TableCell align="center">Remarks</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -49,12 +49,12 @@ const DashboardHome = () => {
                             <TableCell component="th" scope="row">
                                 {row.busNo}
                             </TableCell>
-                            <TableCell align="right">{row.driverNo}</TableCell>
-                            <TableCell align="right">{row.sourceLocation}</TableCell>
-                            <TableCell align="right">{row.destination}</TableCell>
-                            <TableCell align="right">{row.date}</TableCell>
-                            <TableCell align="right">{row.time}</TableCell>
-                            <TableCell align="right">{row.remarks}</TableCell>
+                            <TableCell align="center">{row.driverNo}</TableCell>
+                            <TableCell align="center">{row.sourceLocation}</TableCell>
+                            <TableCell align="center">{row.destination}</TableCell>
+                            <TableCell align="center">{row.date}</TableCell>
+                            <TableCell align="center">{row.time}</TableCell>
+                            <TableCell align="center">{row.remarks}</TableCell>
                         </TableRow>
                     ))}
                     </TableBody>
